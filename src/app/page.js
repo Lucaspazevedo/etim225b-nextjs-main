@@ -16,7 +16,7 @@ function Home() {
     <div>
       <h1>React com Next JS</h1>
       <h2>Aula de introdução</h2>
-      <h3>Leiute e Estilização</h3>
+      <h3>Leiaute e Estilização</h3>
       <p>Nesta aula iremos entender o uso de CSS global e local.</p>
     </div>
   );
