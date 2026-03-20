@@ -10,7 +10,7 @@ function Home() {
    Atividade 1  
 </h1>
 <div className={style.abc}>
-<Image src={minion}></Image>
+<Image src={minion} alt=""></Image>
 <Link href="/">voltar</Link>
 
 </div>
