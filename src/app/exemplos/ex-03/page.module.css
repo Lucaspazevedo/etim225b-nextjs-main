@@ -1,0 +1,14 @@
+.bbbb {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 96vh;
+}   
+
+.botao:hover {
+   
+   border: 0.2rem solid #00f; 
+  
+
+}
