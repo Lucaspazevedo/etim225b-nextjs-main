@@ -23,3 +23,17 @@
     background-color: #000; 
     cursor: pointer;
 }
+
+.botaoo {
+    font-size: 3rem;
+    border: 0.3rem solid #000;
+    border-radius: 1rem; 
+    text-align: center; 
+    font-weight: bold; 
+    padding: 1rem;
+}
+.botaoo:hover {
+    color: #fafafa;    
+    background-color: #000; 
+    cursor: pointer;
+}
