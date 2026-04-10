@@ -27,9 +27,12 @@ const [acao, setAcao] = useState('');
     }
 
 return (
-        <div className={styles.container}>
+        <div className={styles.conteiner}>
             <h1>Atividade 3</h1>
             <h2>Acão selecionada é :  {acao}</h2>
+            
+
+          
 
             
 
@@ -39,7 +42,7 @@ return (
              <Botao texto="Listar" aoClicar={handleListar} acao={'Listar'} />
             <Botao texto="Excluir" aoClicar={handleExcluir} acao={'Excluir'} /> 
             <Botao texto="Cancelar" aoClicar={handleCancelar} acao={'Cancelar'} />
-        </div>
+         </div>
     );
 
 
