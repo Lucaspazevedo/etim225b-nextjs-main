@@ -8,25 +8,35 @@ export default function Atividade04() {
   const [quantidade, setQuantidade] = useState('');
   const [lista, setLista] = useState([]);
 
-  const handleSubmit = (e) => {
+  function adicionar(e) {
     e.preventDefault();
-    if (!produto || !quantidade) return;
 
-    setLista([
-      ...lista,
-      { id: Date.now(), produto, quantidade }
-    ]);
+    if (produto === '' || quantidade === '') return;
+
+    const novo = {
+      id: Date.now(),
+      produto: produto,
+      quantidade: quantidade
+    };
+
+    setLista([...lista, novo]);
 
     setProduto('');
     setQuantidade('');
-  };
+  }
+
+  function excluir(id) {
+    const novaLista = lista.filter(item => item.id !== id);
+    setLista(novaLista);
+  }
 
   return (
     <div className={styles.container}>
-      <h1>Formulário básico</h1>
+      <h1>Lista</h1>
 
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form onSubmit={adicionar} className={styles.form}>
         <input
+          className={styles.input}
           type="number"
           placeholder="Qtd"
           value={quantidade}
@@ -34,21 +44,30 @@ export default function Atividade04() {
         />
 
         <input
+          className={styles.input}
           type="text"
-          placeholder="Produto..."
+          placeholder="Produto"
           value={produto}
           onChange={(e) => setProduto(e.target.value)}
         />
 
-        <button type="submit">Adicionar</button>
+        <button className={styles.botao} type="submit">
+          Adicionar
+        </button>
       </form>
-
-      {lista.length > 0 && <h2>Lista de compras</h2>}
 
       <ul className={styles.lista}>
         {lista.map((item) => (
           <li key={item.id} className={styles.linha}>
             {item.quantidade}x {item.produto}
+
+            <button
+              type="button"
+              className={styles.botaoExcluir}
+              onClick={() => excluir(item.id)}
+            >
+              Excluir
+            </button>
           </li>
         ))}
       </ul>
