@@ -18,7 +18,7 @@
 }
 
 .addBtn {
-  background: #6366f1;
+  background: #6369b9c7;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -45,7 +45,7 @@
 
 .editBtn {
   padding: 6px 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 2px solid #6366f1;
   cursor: pointer;
   background: transparent;
@@ -53,7 +53,7 @@
 
 .deleteBtn {
   padding: 6px 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 2px solid red;
   color: red;
   cursor: pointer;
